@@ -10,7 +10,7 @@ MAINTAINER GT <gt.root@gmail.com>
 # On linux systems you need to set this environment variable before run:
 ENV GODEBUG="madvdontneed=1"
 
-ENV TVLINK_URL=https://api.github.com/repos/AlexELEC/TVLINK-x86_64/releases
+##ENV TVLINK_URL=https://api.github.com/repos/AlexELEC/TVLINK-x86_64/releases
 ENV TVLINK_RELEASE="latest"
 ENV TVLINK_PORT="2020"
 ENV TVLINK_UPDATE="true"
@@ -18,8 +18,8 @@ ENV LINUX_NAME="linux"
 ENV LINUX_UPDATE="true"
 
 
-ENV URL_MAIN="https://github.com/AlexELEC/TVLINK-arm7/releases/download"
-ENV URL_LAST="https://github.com/AlexELEC/TVLINK-arm7/releases/latest"
+ENV URL_MAIN="https://github.com/AlexELEC/TVLINK-x86_64/releases/download"
+ENV URL_LAST="https://github.com/AlexELEC/TVLINK-x86_64/releases/latest"
 ENV TVLINK_DIR="/opt/tvlink"
 ENV TVLINK_URL=
 
@@ -74,10 +74,10 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 
 
 
-HEALTHCHECK --interval=5s --timeout=10s --retries=3 CMD curl -sS 127.0.0.1:2020 || exit 1
+##HEALTHCHECK --interval=5s --timeout=10s --retries=3 CMD curl -sS 127.0.0.1:2020 || exit 1
 
 VOLUME [ "/opt/tvlink" ]
 
 EXPOSE "$TS_PORT"
 
-ENTRYPOINT ["/start_TS.sh"]
+ENTRYPOINT [""]
