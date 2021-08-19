@@ -5,7 +5,7 @@
 # For new library glibc >=2.32 use Ubuntu Groovy or newer
 # FROM ubuntu:groovy
 FROM debian:stable-slim
-MAINTAINER Bob <kcey@mail.ru>
+MAINTAINER GT <gt.root@gmail.com>
 
 # On linux systems you need to set this environment variable before run:
 ENV GODEBUG="madvdontneed=1"
